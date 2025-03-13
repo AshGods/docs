@@ -1,2 +1,10 @@
-- [首页](/)
-- [第一篇教程](docs/new.md)
+- [首页](README.md)
+- 使用教程
+  * [Windows](/docs/windows/)
+    * [Clash](/docs/windows/clash/)
+      * [Clash For Windows 使用教程](/docs/windows/clash/clash.md)
+      * [Clash For Windows 设置全局代理教程](/docs/windows/clash/clash-quan-ju.md)
+  * [介绍](intro.md)
+- [安装指南](install.md)
+- [使用教程](usage.md)
+- [new](usage.md)

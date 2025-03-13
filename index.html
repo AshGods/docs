@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
-  <title>我的教程文档中心</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Docsify 的 vue.css 主题 -->
+  <title>Ash文档中心</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-  <!-- 自定义封面样式 -->
-  <style>
-    .cover {
-      background: url('https://www.loliapi.com/acg/') no-repeat center center;
-      background-size: cover;
-      color: white;
-      text-shadow: 1px 1px 2px black;
-      position: relative;
-    }
-    .cover::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* 添加半透明黑色遮罩 */
-    }
-  </style>
 </head>
 <body>
   <div id="app"></div>
-  <!-- Docsify 的核心 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <!-- 配置 -->
   <script>
     window.$docsify = {
-      loadSidebar: true, // 启用侧边栏
-      name: '我的教程中心', // 左上角标题
-      repo: '你的用户名/你的仓库名', // 右上角 GitHub 链接
-      coverpage: 'cover.md', // 启用封面页
-      themeColor: '#42b983' // Vue 绿色主题色
+      name: 'Ash文档中心',
+      loadSidebar: true,
+      auto2top: true,
+      search: 'auto',
+      coverpage: true,  // 启用封面并指定封面文件
+      onlyCover: false,  // 是否只显示封面，不展示首页内容
+      subMaxLevel: 2,  // 设置子菜单的最大层级
+      loadNavbar: true,
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            var active = document.querySelector('.sidebar-nav .active');
+            if (active) {
+              var parent = active.parentNode;
+              while (parent && parent.className.indexOf('sidebar-submenu') === -1) {
+                parent = parent.parentNode;
+              }
+              if (parent) {
+                parent.style.display = 'block';
+              }
+            }
+          });
+        }
+      ]
     }
   </script>
+  <script src="https://unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://unpkg.com/docsify-dark-mode@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/collapse.min.js"></script>
 </body>
 </html>
