@@ -5,13 +5,13 @@
 - 安装完毕后，在桌面找到 Clash 图标，以**管理员身份运行**。
 - *注意*：首次运行可能会弹出 Windows 安全中心警报，按照提示勾选“允许访问”即可。
 
- ![alt text](image.png)
+ ![alt text](1.png)
 
 ## 2. 获取订阅地址
 - 打开 Clash 主页面，复制你的订阅地址。
 
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](2.avif)
+![alt text](3.avif)
 
 ## 3. 添加订阅
 - 在 Clash 中粘贴订阅地址，添加订阅。
